@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Categories() {
+function Categories({onCategoryClick}) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function Categories() {
       <h2 className="Cat-Title">Categories</h2>
       <ul className="Categories-List">
         {categories.map((category, index) => (
-          <button className="category-button" key={index}>{category.name}</button> 
+          <button className="category-button" key={index} onClick={onCategoryClick.bind(this,category.id)}>{category.name}</button> 
         ))}
       </ul>
     </div>

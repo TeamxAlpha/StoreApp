@@ -1,17 +1,22 @@
 .App {
   text-align: center;
   margin: 20px;
+  
 }
 
 .App-header {
-  background-color: #282c34;
+  display: flex;
+  flex: 1;
+  background-color: #fe931e;
   padding: 20px;
+  /* align-items: start; */
   color: white;
+  
 }
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   justify-items: center;
 }
@@ -47,9 +52,9 @@
 }
 .Categories-List{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
   justify-items: center;
+  margin: 20px 10px 20px 10px;
 }
 
 .category-button{
@@ -75,10 +80,9 @@
     touch-action: manipulation;
 }
 .category-button:hover{
- background-color: violet;
+ background-color: #fe931e;
 }
 
-
-.category-image{
-  width: 150px;
-}
+.category-button:active{
+  background-color: #fe931e;
+ }
