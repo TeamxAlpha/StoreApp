@@ -1,0 +1,7 @@
+.hero{
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url("black-friday-elements-assortment.jpg");
+    background-size: cover;
+    padding: 10px 0px 150px 0px;
+}

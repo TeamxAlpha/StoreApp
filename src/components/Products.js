@@ -19,7 +19,7 @@ const [products, setProducts] = useState([]);
 
 return(
     <div>
-  <h2>Products</h2>
+  <h2 className='pdt'>Products</h2>
       <div className="product-list">
         {products.map((product) => (
           <div key={product.id} className="product">
