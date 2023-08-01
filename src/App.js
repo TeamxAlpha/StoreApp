@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Categories from './components/Categories';
 import Products from './components/Products';
+import { CartProvider } from './Context/CartContext';
 
 function App() {
 const [selectedCategory, setSelectedCategory] = useState ('');
@@ -13,7 +14,7 @@ const handleCategoryClick = (category) => {
 };
 
   return (
-    <>
+    <CartProvider>
    
     <div className='hero'>
     <div className="App">
@@ -38,8 +39,7 @@ const handleCategoryClick = (category) => {
       <Products category={selectedCategory} />
       </div>
     </div>
-
-    </>
+    </CartProvider>
    
   );
 }

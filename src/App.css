@@ -148,3 +148,27 @@
   overflow-x: auto; /* Make the container scrollable if the content exceeds the height */
   justify-content: center;
 }
+/*Cart Context*/
+
+.cart-button{
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  color: #0d172a;
+  cursor: pointer;
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.5rem 1.3rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.cart-button:hover{
+  background-color: burlywood;
+}
