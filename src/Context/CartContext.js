@@ -20,8 +20,6 @@ export function CartProvider({ children }) {
         if (item.id === product.id) {
           return { ...item, quantity: item.quantity + 1 };
         }
-
-        console.log(item)
         return item;
       });
       setCartItems(updatedCartItems);

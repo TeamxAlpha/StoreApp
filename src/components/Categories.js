@@ -4,7 +4,7 @@ function Categories({onCategoryClick}) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the API
+ 
     fetch('https://api.escuelajs.co/api/v1/categories')
       .then((response) => response.json())
       .then((data) => setCategories(data))

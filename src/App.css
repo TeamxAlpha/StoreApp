@@ -81,7 +81,7 @@
 .Products-container {
 
  flex: 1; /* Flex to fill the remaining space in the row */
-  padding: 20px;
+  padding:20px 0px 0px 20px;
 }
 
 .product-title {
@@ -92,7 +92,7 @@
 }
 
 .product-description {
-  margin: 10px 0;
+  margin: 10px 5px;
 }
 
 .product-price {
@@ -100,7 +100,7 @@
   font-weight: bold;
 }
 .product-image{
-  width: 350px;
+  width: 330px;
   height: 180px;
  
 }
@@ -121,17 +121,14 @@
   color: #0d172a;
   cursor: pointer;
   font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 1;
-  padding: 1rem 1.6rem;
+  line-height: 2;
+
+  /* padding: 1.6rem 2.6rem; */
   text-align: center;
   text-decoration: none;
-  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: none;
   user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 .category-button:hover{
  background-color: burlywood;
@@ -139,7 +136,7 @@
 
 .categories-container{ 
 
-  flex: 0 0 180px; /* Set a fixed initial width for the categories container */
+  flex: 0 0 150px; /* Set a fixed initial width for the categories container */
   max-width: 30%; /* Set a maximum width to limit the size of the categories container */
   padding: 20px;
   margin-bottom: 2%;
@@ -172,3 +169,8 @@
 .cart-button:hover{
   background-color: burlywood;
 }
+/* 
+.Cart-container{
+  
+
+} */
