@@ -4,6 +4,7 @@ import {  useDispatch,useSelector } from 'react-redux';
 import { addToCart } from '../store/cartSlice';
 import { Link } from 'react-router-dom';
 
+
 function Products({ category }) {
   const [products, setProducts] = useState([]);
   const dispatch = useDispatch();
@@ -26,19 +27,22 @@ function Products({ category }) {
   };
   return (
 
-    <div>
-      <Link to="/cart">
-        <button className='cart-button'>View Cart</button>
-      </Link>
+    <div className='Product-container'>
+       <Link to="/cart">
+        <button className='view-cart'>View Cart:&nbsp;<div className='view-count'>{cartItems.length} </div>  </button>
+      </Link> 
       <h2 className='pdt'>Products</h2>
       <div className="product-list">
+
+
         {products.map((product) => (
           <div key={product.id} className="product">
             <h2 className="product-title">{product.title}</h2>
             <img src={product.images} alt={product.title} className="product-image" />
             <p className="product-description">{product.description}</p>
             <p className="product-price">Price: ${product.price}</p>
-            <button className='cart-button' onClick={() => handleAddToCart(product)}>Add to Cart</button> 
+            <button className='cart-button' onClick={() => handleAddToCart(product)}>&nbsp;&nbsp;Add to Cart</button>  
+           
           </div>
         ))}
       </div>

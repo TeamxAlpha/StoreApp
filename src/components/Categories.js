@@ -13,7 +13,7 @@ function Categories({onCategoryClick}) {
 
   return (
     <div>
-      <h2 className='pdt'>&nbsp;Categories</h2>
+      <h2 className='category-container'>&nbsp;Categories</h2>
       <ul className="Categories-List">
         {categories.map((category, index) => (
           <button className="category-button" key={index} onClick={onCategoryClick.bind(this,category.id)}>{category.name}</button> 

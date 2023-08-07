@@ -16,11 +16,15 @@
   padding: 10px 0px 150px 0px;
   width: 100%;
   height: 350px;
+  
 }
 .container{
-  display: flex;/* Flex to fill the remaining space in the row */
+  display: flex;
   /* flex-direction: column;   */
   flex: 1;
+}
+a{
+  text-decoration: none;
 }
 .slogan{
   display: flex;
@@ -30,6 +34,9 @@
 .toshow{
   display: flex;  
   flex: 1;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
 }
 .App-header {
   width: 100%;
@@ -42,7 +49,7 @@
   display: flex;
   flex-direction: row;
   flex: 1;
-  justify-content: end;
+  justify-content: right;
   align-self: start;
 
 }
@@ -56,6 +63,8 @@
 }
 .GFG:hover{
   background-color:burlywood;
+  color:#0d172a;
+  border-radius: 5px;
   /* border:2px solid; */
 
 }
@@ -63,19 +72,27 @@
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   justify-items: center;
-}
+  margin-left :3%;
 
+}
+.Product-container{
+  max-width: 300px;
+  
+}
 .product {
 
   padding: 10px;
-  width: 350px;
+  max-width: 300px;
+  /* width: 350px; */
   height: 350px; 
 }
 
 .pdt{
+  margin-left: 4%;
+  margin-top: 15px;
   font-size: 30px;
 }
 .Products-container {
@@ -106,6 +123,11 @@
 }
   /* Categories component*/
 
+  .category-container{
+    /* margin-top: 61px; */
+    font-size: 30px;
+  }
+
 .Categories-List{
   display: flex;
   flex-direction: column ;
@@ -118,7 +140,7 @@
 .category-button{
   background-color: transparent;
   border: none;
-  color: #0d172a;
+  color: antiquewhite;
   cursor: pointer;
   font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 16px;
@@ -132,6 +154,7 @@
 }
 .category-button:hover{
  background-color: burlywood;
+ color: #0d172a;
 }
 
 .categories-container{ 
@@ -140,7 +163,7 @@
   max-width: 30%; /* Set a maximum width to limit the size of the categories container */
   padding: 20px;
   margin-bottom: 2%;
-  background-color: #f5f5f5;
+  background-color: #27282b;
   border-right: 1px solid #ddd;
   overflow-x: auto; /* Make the container scrollable if the content exceeds the height */
   justify-content: center;
@@ -151,7 +174,8 @@
   background-color: transparent;
   border: none;
   border-radius: 5px;
-  color: #0d172a;
+  margin:2% 0% 1% 2%;
+  color:antiquewhite;
   cursor: pointer;
   font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 14px;
@@ -160,17 +184,94 @@
   padding: 0.5rem 1.3rem;
   text-align: center;
   text-decoration: none;
-  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 .cart-button:hover{
   background-color: burlywood;
+  color:#0d172a;
 }
-/* 
-.Cart-container{
-  
+.list-of-cart{
+  width: 500px;
+}
 
-} */
+.view-cart{
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  margin:2% 0% 1% 2%;
+  color:antiquewhite;
+  cursor: pointer;
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.5rem 1.3rem;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex: 1;
+}
+.view-cart:hover{
+  background-color: burlywood;
+  color:#0d172a;
+}
+.cart-details{
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  color:antiquewhite;
+  margin: 45px;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+.cart-image{
+  max-height: 30x;
+  max-width: 20px;
+  padding: 1%;
+  background-color: transparent;
+}
+
+.cart-container{
+  color:antiquewhite;
+  font-size: 30px;
+  margin: 45px;
+ display: flex;
+ flex: 1;
+}
+
+.cart-image:hover{
+  background-color:burlywood;
+  border-radius: 5px;
+}
+.Quantity-Button{
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  margin:2% 2% 1% 2%;
+  color:antiquewhite;
+  cursor: pointer;
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.3rem 1.0rem;
+  text-align: center;
+  text-decoration: none;
+}
+.Quantity-Button:hover{
+  background-color: burlywood;
+  border-radius: 5px;
+  color:#0d172a;
+}
+.view-count{
+  border: 0px solid;
+  border-radius: 100%;
+  background-color: burlywood;
+  color: black;
+  width: 20%;
+  height: 100%;
+  text-decoration: none;
+  padding: 4px;
+}
+.view-count:hover{
+  background-color: #0d172a;
+  color: antiquewhite;
+}
